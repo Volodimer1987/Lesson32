@@ -50,7 +50,7 @@ struct ContentView: View {
             
             
             BackCardView()
-                .frame(width: showCard ? 340:220, height: 220)
+                .frame(width:340, height: 220)
                 .background(self.show ? Color(#colorLiteral(red: 0.1764705926, green: 0.01176470611, blue: 0.5607843399, alpha: 1)):Color(#colorLiteral(red: 1, green: 0.3842282991, blue: 0.3684385979, alpha: 1)))
                 .cornerRadius(20)
                 .shadow(radius: 20)
@@ -63,7 +63,7 @@ struct ContentView: View {
                 .rotationEffect(.degrees(showCard ? -5 : 0))
 
                 .rotation3DEffect(
-                    .degrees(showCard ? 0:10),
+                    .degrees(showCard ? 0:5),
                     axis: (x: 10, y: 0, z: 0))
                 .blendMode(.hardLight)
                 .animation(.easeInOut(duration:0.4))
@@ -87,6 +87,12 @@ struct ContentView: View {
                 .gesture(
                     DragGesture()
                         .onChanged{ value in
+                            
+                            if showCard == true && viewState.height > 0 || viewState.height < 0   {
+                                showCard.toggle()
+                            }
+
+                            
                             self.viewState = value.translation
                             self.show = true
                         }
@@ -109,6 +115,7 @@ struct ContentView: View {
                         .onChanged { value in
                             self.bottomState = value.translation
                             
+                                                        
                             if  self.showFull {
                                 self.bottomState.height += -300
                             }
