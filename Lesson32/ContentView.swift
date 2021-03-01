@@ -14,6 +14,7 @@ struct ContentView: View {
     @State var showCard = false
     @State var bottomState = CGSize.zero
     @State var showFull = false
+    
     var body: some View {
         ZStack {
             TitleView()
@@ -198,9 +199,7 @@ struct TitleView: View {
                     .fontWeight(.bold)
                 Spacer()
             }
-            
             .padding()
-            
             Spacer()
         }
     }
