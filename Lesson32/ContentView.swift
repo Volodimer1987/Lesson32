@@ -30,7 +30,6 @@ struct ContentView: View {
                 )
             
             
-            
             BackCardView()
                 .frame(width: showCard ? 300:340, height: 220)
                 .background(self.show ? Color(#colorLiteral(red: 1, green: 0.3842282991, blue: 0.3684385979, alpha: 1)):Color(#colorLiteral(red: 0.1764705926, green: 0.01176470611, blue: 0.5607843399, alpha: 1)))
@@ -235,4 +234,5 @@ struct  BottomCardView: View {
         .shadow(radius: 20)
         
     }
+    
 }
