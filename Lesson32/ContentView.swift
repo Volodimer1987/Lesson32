@@ -224,13 +224,12 @@ struct  BottomCardView: View {
                 .font(.subheadline)
                 .lineSpacing(4)
             
-            HStack {
-                RingView(color1: Color(#colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)), color2: Color(#colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)), width: 88, height: 88, percent: 50, show: $show)
+            HStack(spacing:20) {
+                RingView(color1: Color(#colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)), color2: Color(#colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)), width: 88, height: 88, percent: 78, show: $show)
                     .animation(Animation.easeInOut.delay(0.3))
                 
-                Spacer().frame(width: 40, height: 40, alignment: .center)
                 
-                VStack {
+                VStack(alignment: .leading, spacing: 8){
                     Text("Дизайн в SwiftUI")
                         .bold()
                     Text("39 из 50 уроков завершино")
@@ -240,6 +239,9 @@ struct  BottomCardView: View {
                 }
                 .padding(20)
                 .background(Color.white)
+                .cornerRadius(20)
+                .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 10)
+                
             }
             Spacer()
         }

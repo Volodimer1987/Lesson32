@@ -36,7 +36,6 @@ struct RingView: View {
                     axis: (x: 1, y: 0, z: 0))
                 .frame(width: width, height: height)
                 .shadow(color: color2.opacity(0.1), radius: 3 * multiplaer, x: 0, y: 3 * multiplaer)
-//                .animation(.easeInOut)
             
             Text("\(Int(percent))%")
                 .font(.system(size: 14 * multiplaer))
