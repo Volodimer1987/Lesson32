@@ -67,10 +67,10 @@ struct ContentView: View {
                 .blendMode(.hardLight)
                 .animation(.easeInOut(duration:0.4))
             
+            
             CardView()
                 .frame(width:showCard ? 375:340,height:220)
                 .background(Color.black)
-//                .cornerRadius(20)
                 .clipShape(RoundedRectangle(cornerRadius: showCard ? 30:20,style: .continuous))
                 .shadow(radius: 20)
                 .offset(x: viewState.width, y: viewState.height)
@@ -95,16 +95,15 @@ struct ContentView: View {
                             self.viewState = value.translation
                             self.show = true
                         }
-                        .onEnded() { value in
+                        .onEnded() { _ in
                             self.viewState = .zero
                             self.show = false
                         }
                 )
             
-//            Text("\(bottomState.height)")
-//                .offset( y: -300)
             
-            BottomCardView()
+            
+            BottomCardView(show:$showCard)
                 .offset(x: 0, y: showCard ? 360:1000)
                 .offset( y: bottomState.height)
                 .blur(radius: self.show ? 20:0)
@@ -142,7 +141,6 @@ struct ContentView: View {
                             
                         }
                 )
-            
         }
     }
 }
@@ -212,6 +210,8 @@ struct TitleView: View {
 }
 
 struct  BottomCardView: View {
+    @Binding var show:Bool
+    
     var body: some View {
         VStack(spacing:20) {
             Rectangle()
@@ -224,6 +224,23 @@ struct  BottomCardView: View {
                 .font(.subheadline)
                 .lineSpacing(4)
             
+            HStack {
+                RingView(color1: Color(#colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)), color2: Color(#colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)), width: 88, height: 88, percent: 50, show: $show)
+                    .animation(Animation.easeInOut.delay(0.3))
+                
+                Spacer().frame(width: 40, height: 40, alignment: .center)
+                
+                VStack {
+                    Text("Дизайн в SwiftUI")
+                        .bold()
+                    Text("39 из 50 уроков завершино")
+                        .font(.footnote)
+                        .foregroundColor(.gray)
+
+                }
+                .padding(20)
+                .background(Color.white)
+            }
             Spacer()
         }
         .padding(.top,8)

@@ -35,12 +35,10 @@ struct Home: View {
                                blendDuration: 0))
             .edgesIgnoringSafeArea(.all)
             
-//            Text("\(viewState.height)")
             
             MenuView()
                 .background(Color.black.opacity(0.001))
                 .offset( y: showProfile ? 0:screen.height)
-                .offset(y:viewState.height)
                 .animation(.spring(response: 0.8,
                                    dampingFraction: 0.8,
                                    blendDuration: 0))

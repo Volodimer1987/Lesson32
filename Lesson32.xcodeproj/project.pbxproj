@@ -16,6 +16,7 @@
 		685340BD25EE501500FDB64D /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685340BC25EE501500FDB64D /* MenuView.swift */; };
 		685340C025EE6BD000FDB64D /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685340BF25EE6BD000FDB64D /* Home.swift */; };
 		685340C325EFD70E00FDB64D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685340C225EFD70E00FDB64D /* HomeView.swift */; };
+		68BE812E25F7B976006AB5A1 /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BE812D25F7B976006AB5A1 /* RingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		685340BC25EE501500FDB64D /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		685340BF25EE6BD000FDB64D /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		685340C225EFD70E00FDB64D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		68BE812D25F7B976006AB5A1 /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				68058F3E25E96B6F000FFD72 /* ContentView.swift */,
 				685340BC25EE501500FDB64D /* MenuView.swift */,
 				685340BF25EE6BD000FDB64D /* Home.swift */,
+				68BE812D25F7B976006AB5A1 /* RingView.swift */,
 				685340C225EFD70E00FDB64D /* HomeView.swift */,
 				68058F4025E96B6F000FFD72 /* Assets.xcassets */,
 				68058F4525E96B6F000FFD72 /* LaunchScreen.storyboard */,
@@ -158,6 +161,7 @@
 				685340BD25EE501500FDB64D /* MenuView.swift in Sources */,
 				685340C025EE6BD000FDB64D /* Home.swift in Sources */,
 				685340C325EFD70E00FDB64D /* HomeView.swift in Sources */,
+				68BE812E25F7B976006AB5A1 /* RingView.swift in Sources */,
 				68058F3D25E96B6F000FFD72 /* SceneDelegate.swift in Sources */,
 				68058F3F25E96B6F000FFD72 /* ContentView.swift in Sources */,
 			);
